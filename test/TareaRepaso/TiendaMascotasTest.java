@@ -1,18 +1,32 @@
 package TareaRepaso;
 
+import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class TiendaMascotasTest {
 
-    @org.junit.jupiter.api.Test
+    @Test
     void agregarMascota() {
+        TiendaMascotas tienda = new TiendaMascotas();
+        tienda.agregarMascota("Lucia", 3, "Perro");
+        assertEquals(0, tienda.cantidadMascotas);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void venderMascota() {
+        TiendaMascotas tienda = new TiendaMascotas();
+        tienda.agregarMascota("Lucia", 3, "Perro");
+        tienda.venderMascota("Lucia");
+        assertEquals(0, tienda.cantidadMascotas);
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void mostrarInventario() {
+        TiendaMascotas tienda = new TiendaMascotas();
+        tienda.agregarMascota("Lucia", 3, "Perro");
+        tienda.venderMascota("Lucia");
+        tienda.mostrarInventario();
+        assertEquals(0, tienda.cantidadMascotas);
     }
 }
